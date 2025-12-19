@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Jason Godfrey",
+    "position": "Accelerate",
+    "img": "img/team/national-advisory-board/Jason-Godfrey.jpeg",
+    "description": "",
+    "social": {
+      "website": "https://accelerate.us/person/jason-godfrey/",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "cv": ""
+    }
+  },{
+    "name": "Laina Vlasnik Yip",
+    "position": "Robin Hood",
+    "img": "img/team/national-advisory-board/Laina-Vlasnik-Yip.jpeg",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/lainayip/",
+      "cv": ""
+    }
+  },{
+    "name": "Matt Kraft",
+    "position": "Brown University",
+    "img": "img/team/national-advisory-board/Matt-Kraft.jpeg",
+    "description": "",
+    "social": {
+      "website": "https://vivo.brown.edu/display/mkraft",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "cv": ""
+    }
+  },{
+    "name": "Jessica Tang",
+    "position": "AFT (MA National Representative)",
+    "img": "img/team/national-advisory-board/Jessica-Tang.jpeg",
+    "description": "",
+    "social": {
+      "website": "https://www.aft.org/about/leadership/jessica-j-tang",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "cv": ""
+    }
+  },{
+    "name": "Stefania Druga",
+    "position": "sakana.ai",
+    "img": "img/team/national-advisory-board/Stefanie-Druga.jpeg",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/drugastefania/",
+      "cv": ""
+    }
+  }
+]
+
+
+

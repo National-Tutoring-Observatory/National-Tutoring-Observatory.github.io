@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - National Tutoring Observatory</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-light">
+    <!-- Navbar Component -->
+    <div id="navbar-container"></div>
+
+    <main>
+        <!-- Header Section -->
+        <section class="py-5 px-4 px-md-5">
+            <div class="container-fluid px-0">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="d-flex flex-column gap-1">
+                                <h1 class="fw-semibold mb-0" style="font-size: 36px; line-height: 48px; color: #222222;">
+                                    Blog
+                                </h1>
+                            </div>
+                            <p class="mb-0 body-text">
+                                Long-form reflections and insights from the NTO team on tutoring, learning science, and the future of education.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="https://nationaltutoringobservatory.substack.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary d-inline-flex align-items-center">
+                                    <span>Visit NTO’s Substack</span>
+                                    <i data-feather="arrow-right" class="ms-2 icon-20"></i>
+                                </a>
+                                <a href="https://nationaltutoringobservatory.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark d-inline-flex align-items-center">
+                                    <span>Subscribe to Newsletter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Feed (Supascribe Substack Embed) -->
+        <section class="pb-5 px-4 px-md-5 pt-0">
+            <div class="container-fluid px-0">
+                <!-- Loading state while Supascribe embed initializes -->
+                <div id="supascribe-loading" class="text-center py-5">
+                    <div class="spinner-border text-danger" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <!-- Feed embed code -->
+                <div data-supascribe-embed-id="98947305561" data-supascribe-feed></div>
+
+                <!-- Supascribe Script -->
+                <script src="https://js.supascribe.com/v1/loader/KHILPJPbgCPV7ci8R0t9vansynh2.js" async></script>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Component Loader -->
+    <script src="js/components.js"></script>
+    <!-- Supascribe loading helper -->
+    <script src="js/supascribe.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <!-- Initialize Feather Icons -->
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

@@ -1,0 +1,967 @@
+/* Custom Styles - Bootstrap Overrides and Additions */
+:root {
+    --primary-red: #b21b1b;
+    --text-dark: #222222;
+    --bg-light: #f5f5f7;
+    --navbar-height: 86px;
+}
+
+/* Feather Icons styling */
+[data-feather] {
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    vertical-align: middle;
+}
+
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-20 {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-light) !important;
+    padding-top: var(--navbar-height); /* Account for fixed navbar */
+}
+
+/* Allow pages to opt out of navbar padding (e.g., full-screen hero on index) */
+body.no-navbar-padding {
+    padding-top: 0;
+}
+
+main {
+    background-color: var(--bg-light);
+}
+
+/* Custom button styles to match design */
+.btn-primary {
+    background-color: var(--primary-red) !important;
+    border-color: var(--primary-red) !important;
+    border-radius: 100px;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+
+
+.btn-primary:hover {
+    background-color: #8b0000 !important;
+    border-color: #8b0000 !important;
+}
+
+.btn-secondary {
+    color: var(--primary-red) !important;
+    border-color: var(--primary-red) !important;
+    border-radius: 100px;
+    background-color: inherit !important;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-red) !important;
+    border-color: var(--primary-red) !important;
+    color: #FFFFFF !important;
+}
+
+.btn-outline-white {
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    border-radius: 100px;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    width: auto !important;
+    align-self: flex-start !important;
+}
+
+.btn-outline-white:hover {
+    background-color: #FFFFFF !important;
+    color: inherit !important;
+}
+
+/* Button in dark background section - text should be dark on hover */
+.bg-dark .btn-outline-white:hover {
+    color: #212529 !important;
+}
+
+/* Button in red background section - text should be red on hover */
+[style*="background-color: #b21b1b"] .btn-outline-white:hover,
+[style*="background-color:#b21b1b"] .btn-outline-white:hover {
+    color: #b21b1b !important;
+}
+
+/* Dark outline button (inverse of btn-outline-white) */
+.btn-outline-dark {
+    color: var(--text-dark) !important;
+    border-color: var(--text-dark) !important;
+    border-radius: 100px;
+    background-color: transparent !important;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--text-dark) !important;
+    color: #FFFFFF !important;
+}
+/* Object fit utility */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Custom text colors */
+.text-danger {
+    color: var(--primary-red) !important;
+}
+
+/* Ensure images don't break layout */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero section styling */
+#hero-section {
+    width: 100%;
+}
+
+#hero-section.hero-fullscreen {
+    padding: 0;
+}
+
+#hero-section.hero-fullscreen .container-fluid {
+    padding: 0;
+}
+
+.hero-typing-word {
+    display: inline-block;
+}
+
+.hero-typing-word::after {
+    content: "_";
+    display: inline-block;
+    margin-left: 4px;
+    animation: hero-caret-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hero-caret-blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Full-bleed hero banner (Figma 390:6106) */
+.hero-banner {
+    min-height: 100vh;
+    height: 100vh;
+    max-height: none;
+    width: 100vw;
+    background-color: var(--bg-light);
+}
+
+.hero-banner-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('../img/hero/mission.jpg');
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 0.8s ease-in-out, transform 12s ease-in-out;
+}
+
+.hero-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.hero-banner-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 64px 32px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-banner-heading {
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.75);
+    font-weight: 300;
+    letter-spacing: 0.16em;
+}
+
+@media (min-width: 992px) {
+    .hero-banner-content {
+        padding: 96px 80px;
+    }
+}
+
+/* Background pan animation for hero carousel */
+#hero-background {
+    background-size: cover;
+    background-position: center center;
+}
+
+.hero-pan {
+    animation: hero-pan 14s ease-in-out forwards;
+}
+
+@keyframes hero-pan {
+    0% {
+        transform: scale(1.05) translateY(0);
+    }
+    50% {
+        transform: scale(1.12) translateY(-30px);
+    }
+    100% {
+        transform: scale(1.05) translateY(0);
+    }
+}
+
+/* Hero image "dots" indicator */
+.hero-dots-wrapper {
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-progress-dot {
+    width: 32px;
+    height: 4px;
+    border-radius: 999px;
+    border: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+}
+
+.hero-progress-dot.active {
+    background-color: #ffffff;
+}
+
+/* Approach diagrams: constrain width and center images */
+#approach-diagram-1 img,
+#approach-diagram-2 img {
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body-text {
+    color: var(--text-dark);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    opacity: 0.75;
+}
+
+.text-accent {
+    color: var(--primary-red) !important;
+}
+
+/* Row section styling */
+#row-section {
+    width: 100%;
+    height: 100%;
+}
+
+/* Column styling */
+#col-A {
+
+}
+
+#col-B {
+
+}
+
+/* Column A row styling */
+#col-A-row-1 {
+    display: flex;
+    padding: 0 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+#col-A-row-2 {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+
+
+.hero-tile {
+    height: calc((100vh - var(--navbar-height)) / 2); /* Full height minus navbar */
+    min-height: 420px;
+    background-color: var(--bg-light);
+}
+
+.subtile {
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.hero-h1 {
+    color: var(--text-dark);
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px; /* 125% */
+}
+.hero-h2 {
+    color: var(--text-dark);
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px; /* 133.333% */
+}
+.hero-h3 {
+    color: var(--text-dark);
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 140% */
+}
+
+/* Event card title - clamp to 3 lines, reserve 3 lines of space */
+.event-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 84px; /* 3 * 28px line-height */
+    min-height: 84px; /* always reserve space for 3 lines */
+}
+
+.footer-category {
+    color: rgba(255, 255, 255, 0.75);
+    font-family: "Roboto Mono";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 153.846% */
+    text-transform: uppercase;
+}
+/* Footer link hover */
+footer a {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+}
+
+footer a:hover {
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+/* Blog filter active state */
+.filter-btn.active {
+    background-color: var(--primary-red) !important;
+    border-color: var(--primary-red) !important;
+    color: white !important;
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    padding: 8px 12px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-red) !important;
+}
+
+/* Navbar dropdown menu styling */
+.dropdown-menu {
+    border-color: #000 !important;
+    border-radius: 0 !important;
+}
+
+.dropdown-menu .dropdown-divider {
+    border-top-color: #000 !important;
+}
+
+/* Dropdown items styled like navbar items */
+.dropdown-menu .dropdown-item {
+    color: var(--text-dark) !important;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 8px 12px;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    color: var(--primary-red) !important;
+    background-color: transparent !important;
+}
+
+/* Bootstrap navbar active state */
+.navbar-nav .nav-link.active {
+    color: var(--primary-red) !important;
+}
+
+/* Ensure navbar is fixed to top */
+.navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1030 !important;
+    background-color: var(--bg-light) !important;
+}
+
+/* Transparent/inverted navbar over full-screen hero on index */
+body.hero-navbar-transparent.navbar-on-hero .navbar {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar.bg-light {
+    background-color: transparent !important;
+}
+
+/* When mobile menu is expanded over hero, darken entire navbar background */
+body.hero-navbar-transparent.navbar-on-hero .navbar.navbar-expanded-dark {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .dropdown-item {
+    color: #ffffff !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .dropdown-item:hover,
+body.hero-navbar-transparent.navbar-on-hero .navbar .dropdown-item:focus {
+    color: var(--primary-red) !important;
+    background-color: transparent !important;
+}
+
+/* Collapsed mobile navbar menu (all links) - use inverse (dark) scheme over hero */
+body.hero-navbar-transparent.navbar-on-hero .navbar .navbar-collapse.show {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .navbar-collapse.show .nav-link {
+    color: #ffffff !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .navbar-collapse.show .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .navbar-collapse.show .dropdown-item {
+    color: #ffffff !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar .navbar-collapse.show .dropdown-item:hover,
+body.hero-navbar-transparent.navbar-on-hero .navbar .navbar-collapse.show .dropdown-item:focus {
+    color: var(--primary-red) !important;
+    background-color: transparent !important;
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar-brand img {
+    filter: invert(1);
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.75);
+}
+
+body.hero-navbar-transparent.navbar-on-hero .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* Navbar brand image sizing */
+.navbar-brand img {
+    height: 72px !important;
+    width: auto !important;
+    object-fit: contain;
+}
+
+/* About row vertical alignment */
+.vertical-center {
+    align-items: center;
+}
+
+/* About row image styling */
+#about-row-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Partners Logo Carousel */
+.partners-logo-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.partners-logo-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.partners-logo-scroll {
+    overflow: hidden;
+    width: 100%;
+}
+
+.partners-logo-track {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    animation: scroll-logos 30s linear infinite;
+    will-change: transform;
+}
+
+.partners-logo-container:hover .partners-logo-track {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    height: 64px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 1;
+    mix-blend-mode: multiply; /* So white backgrounds blend into page background */
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Team member card styling (Team page) */
+.member-card {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 48px;
+}
+
+/* Tutoring providers card styling (Team page) */
+.provider-card {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+#team-members-container .provider-card:not(:last-child) {
+    border-bottom: 1px solid var(--text-dark);
+}
+
+.provider-inner {
+    gap: 32px !important;
+}
+
+.provider-logo-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #050807;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.provider-logo {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    display: block;
+}
+
+.provider-name {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.provider-header {
+    gap: 24px;
+    width: 100%;
+}
+
+.provider-info,
+.provider-social {
+    flex: 1 1 0;
+}
+
+.provider-social {
+    align-items: flex-start;
+    padding-top: 8px;
+}
+
+.provider-contact-name {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.provider-contact-title {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    opacity: 0.85;
+}
+
+.provider-contact-bio {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 0.8;
+}
+
+.provider-contact-image-container {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #050807;
+    border: 1px solid #050807;
+}
+
+.provider-contact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.member-card[style*="display: none"] {
+    display: none !important;
+}
+
+/* Divider between member cards */
+#team-members-container .member-card:not(:last-child) {
+    border-bottom: 1px solid var(--text-dark);
+}
+
+.member-inner {
+    gap: 32px !important;
+}
+
+.member-image-container {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #050807;
+    border: 1px solid #050807;
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.member-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.member-header {
+    gap: 24px;
+    width: 100%;
+}
+
+.member-info,
+.member-social {
+    flex: 1 1 0;
+}
+
+.member-name {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.member-position {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.member-description {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.75;
+}
+
+.member-social {
+    align-items: flex-start;
+    padding-top: 8px;
+}
+
+.member-social a,
+.provider-social a {
+    color: var(--primary-red) !important;
+    transition: opacity 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.member-social a:hover {
+    opacity: 0.8;
+}
+
+.member-social span,
+.provider-social span {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 8px;
+}
+
+@media (max-width: 767.98px) {
+    .member-inner {
+        flex-direction: column !important;
+    }
+
+    .member-image-container {
+        width: 200px;
+        height: 200px;
+        aspect-ratio: 1 / 1; /* Maintain square for circular image */
+        margin: 0 auto;
+    }
+
+    /* Stack general info above social links on small viewports */
+    .member-header {
+        flex-direction: column;
+    }
+
+    .member-info,
+    .member-social {
+        width: 100%;
+    }
+
+    .provider-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .provider-info,
+    .provider-social {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Ensure image and content sit side-by-side on md and up */
+    .member-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .member-header {
+        flex-direction: row;
+    }
+
+    .member-image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .provider-header {
+        flex-direction: row;
+    }
+}
+
+/* Team tabs use standard button sizing (btn-primary / btn-outline-dark) for consistency */
+
+/* Research partners grid (partners.html) */
+.partner-grid {
+    border-top: 1px solid var(--text-dark);
+    border-left: 1px solid var(--text-dark);
+}
+
+.partner-grid .partner-card {
+    background-color: var(--bg-light);
+    border: 0;
+    border-right: 1px solid var(--text-dark);
+    border-bottom: 1px solid var(--text-dark);
+}
+
+.partner-card-inner {
+    padding: 32px;
+}
+
+@media (min-width: 992px) {
+    .partner-card-inner {
+        padding: 48px;
+    }
+}
+
+.partner-logo-wrapper {
+    background-color: transparent;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 64px;
+}
+
+.partner-logo-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px;
+}
+
+/* Spacing above partner Learn More button */
+.partner-card-inner > div:last-child {
+    margin-top: 16px;
+}
+
+.partner-name {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.partner-description {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.75;
+}
+
+/* GitHub widget repo name: single-line with ellipsis */
+.github-repo-name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Override hero heading styles specifically for full-screen banner */
+h1.hero-banner-heading {
+    font-weight: 300;
+    letter-spacing: 0.1em;
+}
+
+@media (min-width: 992px) {
+    h1.hero-banner-heading {
+        font-size: 72px;
+        line-height: 1.05;
+    }
+}
+
+@media (max-width: 991.98px) {
+    h1.hero-banner-heading {
+        font-size: 48px;
+        line-height: 1.05;
+    }
+}
+
+.stakeholder-h2 {
+    color: var(--text-dark);
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+}

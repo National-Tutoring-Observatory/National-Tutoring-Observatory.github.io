@@ -139,22 +139,22 @@ function createMemberCard(member, category) {
             socialContainer.appendChild(websiteWrapper);
         }
 
-        if (member.social.cv) {
-            const cvWrapper = document.createElement('div');
-            cvWrapper.className = 'd-flex align-items-center gap-2';
-            const cvLink = document.createElement('a');
-            cvLink.href = member.social.cv;
-            cvLink.target = '_blank';
-            cvLink.rel = 'noopener noreferrer';
-            cvLink.className = 'text-decoration-none';
-            cvLink.style.color = 'var(--primary-red)';
-            cvLink.innerHTML = '<i data-feather="file-text" class="icon-24"></i>';
-            const cvText = document.createElement('span');
-            cvText.textContent = 'CV';
-            cvLink.appendChild(cvText);
-            cvWrapper.appendChild(cvLink);
-            socialContainer.appendChild(cvWrapper);
-        }
+        // if (member.social.cv) {
+        //     const cvWrapper = document.createElement('div');
+        //     cvWrapper.className = 'd-flex align-items-center gap-2';
+        //     const cvLink = document.createElement('a');
+        //     cvLink.href = member.social.cv;
+        //     cvLink.target = '_blank';
+        //     cvLink.rel = 'noopener noreferrer';
+        //     cvLink.className = 'text-decoration-none';
+        //     cvLink.style.color = 'var(--primary-red)';
+        //     cvLink.innerHTML = '<i data-feather="file-text" class="icon-24"></i>';
+        //     const cvText = document.createElement('span');
+        //     cvText.textContent = 'CV';
+        //     cvLink.appendChild(cvText);
+        //     cvWrapper.appendChild(cvLink);
+        //     socialContainer.appendChild(cvWrapper);
+        // }
 
         if (member.social.twitter) {
             const twitterWrapper = document.createElement('div');

@@ -9,13 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Default hero background images (reuse existing hero assets)
-    const defaultHeroImages = [
-        'img/hero/mission.jpg',
-        'img/hero/about.jpg',
-        'img/hero/work.jpg',
-        'img/hero/news.jpg',
-        'img/hero/news2.jpg'
-    ];
+    const defaultHeroImages = [];
 
     // Images currently in use (can be overridden from JSON)
     let heroImages = [...defaultHeroImages];

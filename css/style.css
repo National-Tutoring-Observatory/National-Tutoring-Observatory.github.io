@@ -260,7 +260,7 @@ img {
 }
 
 .hero-progress-dot {
-    width: 32px;
+    width: 12px;
     height: 4px;
     border-radius: 999px;
     border: 0;
@@ -936,6 +936,14 @@ body.hero-navbar-transparent.navbar-on-hero .navbar-toggler-icon {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* GitHub widget repo description: clamp to 2 lines with ellipsis */
+.github-repo-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Override hero heading styles specifically for full-screen banner */

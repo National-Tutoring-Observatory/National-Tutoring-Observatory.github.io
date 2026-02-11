@@ -52,8 +52,13 @@ async function loadGitHubWidget() {
                 <div class="row g-2">
                     ${reposData.slice(0, 6).map(repo => `
                         <div class="col-6">
-                            <div class="card border p-3">
-                                <a href="${repo.html_url}" class="github-repo-name text-primary fw-semibold small text-decoration-none" target="_blank" rel="noopener noreferrer">${repo.name}</a>
+                            <div class="card border p-3 h-100">
+                                <a href="${repo.html_url}" class="github-repo-name text-primary fw-semibold small text-decoration-none" target="_blank" rel="noopener noreferrer">
+                                    ${repo.name}
+                                </a>
+                                ${repo.description ? `
+                                <p class="github-repo-description small text-muted mb-0 mt-1">${repo.description}</p>
+                                ` : ''}
                             </div>
                         </div>
                     `).join('')}

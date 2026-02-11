@@ -86,10 +86,22 @@
   },{
     "name": "Whitney Romero",
     "position": "Tioga Central School District",
-    "img": "img/team/placeholder.png",
+    "img": "img/team/practitioner-advisory-board/Whitney-R.jpg",
     "description": "",
     "social": {
       "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "",
+      "cv": ""
+    }
+  },{
+    "name": "Krishna Chaitanya Rao Kathala",
+    "position": "The Ohio State University",
+    "img": "img/team/practitioner-advisory-board/Krishna-K.png",
+    "description": "",
+    "social": {
+      "website": "https://tdai.osu.edu/people/kathala.1",
       "email": "",
       "twitter": "",
       "linkedin": "",

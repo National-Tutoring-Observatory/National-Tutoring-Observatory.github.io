@@ -1,5 +1,44 @@
 [
   {
+    "name": "Monica Bhatt",
+    "position": "University of Chicago Crime and Education Labs",
+    "img": "img/team/national-advisory-board/Monica-Bhatt.jpeg",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/monicabhatt/",
+      "cv": ""
+    }
+  },
+  {
+    "name": "Ben Berres",
+    "position": "Administration for Children and Families",
+    "img": "img/team/national-advisory-board/Ben-Berres.jpeg",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/benjamin-berres-11541623/",
+      "cv": ""
+    }
+  },
+  {
+    "name": "Stefania Druga",
+    "position": "sakana.ai",
+    "img": "img/team/national-advisory-board/Stefanie-Druga.jpeg",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/drugastefania/",
+      "cv": ""
+    }
+  },
+  {
     "name": "Jason Godfrey",
     "position": "Accelerate",
     "img": "img/team/national-advisory-board/Jason-Godfrey.jpeg",
@@ -11,19 +50,8 @@
       "linkedin": "",
       "cv": ""
     }
-  },{
-    "name": "Laina Vlasnik Yip",
-    "position": "Robin Hood",
-    "img": "img/team/national-advisory-board/Laina-Vlasnik-Yip.jpeg",
-    "description": "",
-    "social": {
-      "website": "",
-      "email": "",
-      "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/lainayip/",
-      "cv": ""
-    }
-  },{
+  },
+  {
     "name": "Matt Kraft",
     "position": "Brown University",
     "img": "img/team/national-advisory-board/Matt-Kraft.jpeg",
@@ -35,10 +63,37 @@
       "linkedin": "",
       "cv": ""
     }
-  },{
+  },
+  {
+    "name": "Andrew Rice",
+    "position": "Education Analytics",
+    "img": "img/team/national-advisory-board/Andrew-Rice.png",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.edanalytics.org/people/andrew-rice",
+      "cv": ""
+    }
+  },
+  {
+    "name": "David Sallay",
+    "position": "A4L",
+    "img": "img/team/national-advisory-board/David-Sallay.jpeg",
+    "description": "",
+    "social": {
+      "website": "",
+      "email": "",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/david-sallay/",
+      "cv": ""
+    }
+  },
+  {
     "name": "Jessica Tang",
     "position": "AFT (MA National Representative)",
-    "img": "img/team/national-advisory-board/Jessica-Tang.jpeg",
+    "img": "img/team/national-advisory-board/Jessica-Tang.png",
     "description": "",
     "social": {
       "website": "https://www.aft.org/about/leadership/jessica-j-tang",
@@ -47,16 +102,17 @@
       "linkedin": "",
       "cv": ""
     }
-  },{
-    "name": "Stefania Druga",
-    "position": "sakana.ai",
-    "img": "img/team/national-advisory-board/Stefanie-Druga.jpeg",
+  },
+  {
+    "name": "Laina Vlasnik Yip",
+    "position": "Robin Hood",
+    "img": "img/team/national-advisory-board/Laina-Vlasnik-Yip.jpeg",
     "description": "",
     "social": {
       "website": "",
       "email": "",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/drugastefania/",
+      "linkedin": "https://www.linkedin.com/in/lainayip/",
       "cv": ""
     }
   }

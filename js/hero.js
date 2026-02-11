@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const typingSpan = document.getElementById('hero-typing-word');
     const heroBackground = document.getElementById('hero-background');
-    const progressDots = document.querySelectorAll('.hero-progress-dot');
+    const heroDotsWrapper = document.querySelector('.hero-dots-wrapper');
+    let progressDots = [];
 
     // Require only the core elements; progress dots are optional (we no longer show a progress bar)
     if (!typingSpan || !heroBackground) {
@@ -18,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let imageIntervalId = null;
 
     function setHeroImage(index) {
+        if (!heroImages || heroImages.length === 0) {
+            return;
+        }
+
         currentImageIndex = index;
 
         // Update background image
@@ -46,17 +51,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 8000);
     }
 
-    // Attach click handlers for manual navigation (only if dots exist)
-    if (progressDots.length > 0) {
-        progressDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const indexAttr = dot.getAttribute('data-hero-index');
-                const index = Number(indexAttr);
-                if (Number.isNaN(index)) return;
+    function rebuildDots() {
+        if (!heroDotsWrapper) return;
 
+        // Clear existing dots and references
+        heroDotsWrapper.innerHTML = '';
+        progressDots = [];
+
+        heroImages.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = 'hero-progress-dot';
+            dot.setAttribute('data-hero-index', String(index));
+            dot.setAttribute('aria-label', `Hero image ${index + 1}`);
+
+            dot.addEventListener('click', () => {
                 setHeroImage(index);
                 startImageRotation();
             });
+
+            heroDotsWrapper.appendChild(dot);
+            progressDots.push(dot);
         });
     }
 
@@ -67,8 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
             heroImages = [...defaultHeroImages];
         }
 
-        setHeroImage(0);
-        startImageRotation();
+        // Rebuild progress dots based on the current heroImages
+        rebuildDots();
+
+        if (heroImages.length > 0) {
+            setHeroImage(0);
+            startImageRotation();
+        }
     }
 
     // Initialize hero background with defaults first

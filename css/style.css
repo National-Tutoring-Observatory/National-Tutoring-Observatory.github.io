@@ -95,6 +95,30 @@
         padding: 4px 36px 4px 12px;
     }
 }
+/* ── Sandpiper Event Callout ────────────────────────── */
+.sandpiper-event-callout {
+    display: inline-block;
+    background-color: #fef3f0;
+    border-left: 3px solid var(--primary-red);
+    padding: 10px 16px;
+    border-radius: 0 6px 6px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+.sandpiper-event-callout a {
+    color: var(--primary-red);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s;
+}
+
+.sandpiper-event-callout a:hover {
+    opacity: 0.75;
+}
 
 /* Feather Icons styling */
 [data-feather] {

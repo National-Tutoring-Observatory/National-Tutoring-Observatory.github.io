@@ -1,0 +1,30 @@
+[
+  {
+    "authors": "Bakhtawar Ahtisham, Kirk Vanacore, Jinsook Lee, Zhuqian Zhou, Doug Pietrzak, Rene F. Kizilcec",
+    "year": 2026,
+    "title": "AI Annotation Orchestration: Evaluating LLM verifiers to Improve the Quality of LLM Annotations in Learning Analytics",
+    "venue": "LAK26",
+    "link": "https://arxiv.org/abs/2511.09785"
+  },
+  {
+    "authors": "Kirk Vanacore, Danielle R Thomas, Digory Smith, Bibi Groot, Justin Reich, Rene Kizilcec",
+    "year": 2026,
+    "title": "A Causal Framework for Estimating Heterogeneous Effects of On-Demand Tutoring",
+    "venue": "EDM2026",
+    "link": "https://arxiv.org/abs/2602.19296"
+  },
+  {
+    "authors": "Zhuqian Zhou, Kirk Vanacore, Bakhtawar Ahtisham, Jinsook Lee, Doug Pietrzak, Daryl Hedley, Jorge Dias, Chris Shaw, Ruth Schäfer, René F. Kizilcec",
+    "year": 2026,
+    "title": "Utility-Preserving De-Identification for Math Tutoring: Investigating Numeric Ambiguity in the MathEd-PII Benchmark Dataset",
+    "venue": "EDM2026",
+    "link": "https://arxiv.org/abs/2602.16571"
+  },
+  {
+    "authors": "Bakhtawar Ahtisham, Kirk Vanacore, Zhuqian Zhou, Jinsook Lee, Rene F. Kizilcec",
+    "year": 2026,
+    "title": "LLM Reasoning Predicts When Models Are Right: Evidence from Coding Classroom Discourse",
+    "venue": "EDM2026",
+    "link": "https://arxiv.org/abs/2602.09832"
+  }
+]

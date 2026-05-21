@@ -4,7 +4,10 @@
     --text-dark: #222222;
     --bg-light: #f5f5f7;
     --navbar-height: 86px;
-    --announcement-height: 40px;
+    /* Announcement bar height. Set to 0px when no announcement bar is active in navbar.html.
+    When restoring the bar, set to 40px to reserve space at top of page. */
+    --announcement-height: 0px;
+
 }
 
 /* ── Announcement Banner ────────────────────────────── */

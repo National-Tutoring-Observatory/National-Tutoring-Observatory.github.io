@@ -17,6 +17,7 @@ All dynamic content (team members, publications, partners) is driven by **JSON d
 - [Approach B: Git CLI (Advanced)](#approach-b-git-cli-advanced)
 - [Image Guidelines](#image-guidelines)
 - [How the Site Works](#how-the-site-works)
+- [Announcement Banner and Survey Page](#announcement-banner-and-survey-page)
 - [Important Notes and Gotchas](#important-notes-and-gotchas)
 
 ---
@@ -32,6 +33,7 @@ All dynamic content (team members, publications, partners) is driven by **JSON d
 ├── news.html                      # News page
 ├── blog.html                      # Blog page
 ├── contact.html                   # Contact page
+├── interest-survey.html           # Embedded interest survey (linked from the banner)
 │
 ├── approach/                      # Sub-pages under Approach
 │   ├── developers.html
@@ -418,6 +420,37 @@ python3 serve.py
 ```
 
 See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for help with common issues like 404 errors or missing images.
+
+---
+
+## Announcement Banner and Survey Page
+
+### Announcement banner
+
+A dismissible red banner can appear at the very top of every page (above the navbar) to promote time-sensitive things like a survey, an event, or a launch. It is defined once in `components/navbar.html`, so it shows on every page automatically. Visitors can close it with the `×` button, which hides it only for them.
+
+**Change the banner text or link:**
+
+1. Open `components/navbar.html`.
+2. Edit the text inside `<span class="announcement-bar-text">` (including the leading emoji), and the `href` and label of the `<a class="announcement-bar-link">`.
+
+**Turn the banner off (or back on):**
+
+The banner reserves space at the top of the page using a CSS variable.
+
+1. In `css/style.css`, find `--announcement-height` in the `:root` block near the top.
+2. Set it to `0px` to hide the banner, or back to `40px` to show it.
+
+To remove the banner entirely, also delete the `<!-- Announcement Banner -->` block in `components/navbar.html`.
+
+### Interest survey page
+
+`interest-survey.html` embeds an external survey form so visitors can fill it out without leaving the site.
+
+- **Point it at a different survey:** change the URL in `<iframe src="...">`, and update the matching fallback ("Open it in a new tab") link just below the iframe so both use the same URL.
+- **The survey provider's own header is hidden** by cropping the top of the embed. If that header reappears, or the bottom of the survey gets cut off, adjust the two values in the survey block of `css/style.css`:
+  - `--survey-header-crop` controls how much is trimmed from the top of the embed.
+  - `--survey-iframe-height` controls how tall the embed is. Increase it if the survey grows and the bottom is cut off.
 
 ---
 

@@ -1134,3 +1134,13 @@ h1.hero-banner-heading {
     font-size: 14px;
 }
 
+/* On small screens the survey content runs to the screen edges. We cannot pad inside
+   the cross-origin iframe, so inset the whole embed instead, letting the page background
+   show in the side gutters. */
+@media (max-width: 576px) {
+    .survey-iframe {
+        left: 16px;
+        width: calc(100% - 32px);
+    }
+}
+

@@ -1,5 +1,8 @@
 /* Custom Styles - Bootstrap Overrides and Additions */
 :root {
+    /* The site is designed light-only; declare it so browsers and dark-mode tools
+       don't invert the page chrome (which made the navbar logo hard to read). */
+    color-scheme: light;
     --primary-red: #b21b1b;
     --text-dark: #222222;
     --bg-light: #f5f5f7;
@@ -1104,6 +1107,9 @@ h1.hero-banner-heading {
        the iframe just shows its own scrollbar rather than cutting off the bottom, so
        nothing becomes unreachable. Raise it to keep the single-scrollbar look. */
     --survey-iframe-height: 3400px;
+    /* Side inset for the survey embed on mobile, so the form text does not run to the
+       screen edges. Matches the site's px-4 (24px) content padding. Tune this one value. */
+    --survey-mobile-inset: 24px;
 }
 
 .survey-embed-section {
@@ -1139,8 +1145,8 @@ h1.hero-banner-heading {
    show in the side gutters. */
 @media (max-width: 576px) {
     .survey-iframe {
-        left: 16px;
-        width: calc(100% - 32px);
+        left: var(--survey-mobile-inset);
+        width: calc(100% - 2 * var(--survey-mobile-inset));
     }
 }
 

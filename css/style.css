@@ -1101,12 +1101,11 @@ h1.hero-banner-heading {
        shift the iframe up by this amount inside an overflow-hidden wrapper.
        Tune this single value if Qualtrics changes the header height. */
     --survey-header-crop: 118px;
-    /* Fixed iframe height. Tuned so the whole survey fits with a little headroom, which
-       gives a single (page) scrollbar instead of a nested iframe scrollbar on desktop.
-       If the survey ever grows taller than this (or reflows taller on small screens),
-       the iframe just shows its own scrollbar rather than cutting off the bottom, so
-       nothing becomes unreachable. Raise it to keep the single-scrollbar look. */
-    --survey-iframe-height: 3400px;
+    /* Fixed iframe height. Kept deliberately compact so the survey is a contained,
+       scrollable box rather than a tall full-length embed. The survey scrolls inside its
+       own scrollbar to reach the lower fields. Raise it for a taller embed with less
+       internal scrolling. */
+    --survey-iframe-height: 1200px;
     /* Side inset for the survey embed on mobile, so the form text does not run to the
        screen edges. Matches the site's px-4 (24px) content padding. Tune this one value. */
     --survey-mobile-inset: 24px;

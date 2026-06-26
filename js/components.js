@@ -48,7 +48,7 @@ async function loadComponent(elementId, componentPath) {
 
         // Fix navbar links so they always point to project-root pages (not relative to subdirectories)
         if (elementId === 'navbar-container') {
-            const links = container.querySelectorAll('a.nav-link, .dropdown-menu a.dropdown-item, .navbar-brand');
+            const links = container.querySelectorAll('a.nav-link, .dropdown-menu a.dropdown-item, .navbar-brand, .announcement-bar-link');
             links.forEach(link => {
                 const href = link.getAttribute('href');
                 if (!href || href.startsWith('http') || href.startsWith('#')) return;

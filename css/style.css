@@ -1108,18 +1108,23 @@ h1.hero-banner-heading {
        for browsers without dvh. */
     --survey-iframe-height: calc(100vh - var(--navbar-height) - var(--announcement-height));
     --survey-iframe-height: calc(100dvh - var(--navbar-height) - var(--announcement-height));
-    /* Side inset for the survey embed on mobile, so the form text does not run to the
-       screen edges. Matches the site's px-4 (24px) content padding. Tune this one value. */
-    --survey-mobile-inset: 24px;
+    /* Survey is centered in a column capped at this width so it doesn't span the whole
+       window. The space beside it shows the page's light-grey background (matching the
+       navbar and the "survey not loading?" area) and gives people gutters to grab-scroll. */
+    --survey-max-width: 1200px;
+    /* Even side gutters at every screen size, so the survey never hugs the edges. */
+    --survey-side-padding: 24px;
 }
 
 .survey-embed-section {
-    padding: 0;
+    padding: 0 var(--survey-side-padding);
 }
 
 .survey-embed-wrapper {
     position: relative;
     width: 100%;
+    max-width: var(--survey-max-width);
+    margin: 0 auto;
     height: var(--survey-iframe-height);
     overflow: hidden;
 }
@@ -1139,15 +1144,5 @@ h1.hero-banner-heading {
     padding: 16px;
     margin: 0;
     font-size: 14px;
-}
-
-/* On small screens the survey content runs to the screen edges. We cannot pad inside
-   the cross-origin iframe, so inset the whole embed instead, letting the page background
-   show in the side gutters. */
-@media (max-width: 576px) {
-    .survey-iframe {
-        left: var(--survey-mobile-inset);
-        width: calc(100% - 2 * var(--survey-mobile-inset));
-    }
 }
 

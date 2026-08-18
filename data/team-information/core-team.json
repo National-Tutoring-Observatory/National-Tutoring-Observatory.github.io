@@ -103,20 +103,7 @@
       "cv": ""
     }
   },
-  {
-    "name": "Stacey Stone",
-    "position": "Partnership Manager",
-    "img": "img/team/core/stacey-stone.jpg",
-    "description": "Stacey is the Partnership Manager for the National Tutoring Observatory. In addition, she is the Chair's Assistant in the Department of Computer Science within the Cornell Ann S. Bowers College of Computing and Information Science.",
-    "social": {
-      "website": "",
-      "email": "sms252@cornell.edu",
-      "twitter": "",
-      "linkedin": "",
-      "cv": ""
-    }
-  },
-  {
+    {
     "name": "Daryl Hedley",
     "position": "Senior Education Product Engineer",
     "img": "img/team/core/daryl-hedley.jpg",
